@@ -6,6 +6,7 @@ import "@/styles/globals.css";
 
 import Header from "@/components/header/Header";
 import Footer from "@/components/footer/Footer";
+import CartProvider from "@/provider/CartProvider";
 
 const poppinsFont = Poppins({ subsets: ["latin"], weight: "500" });
 
@@ -22,9 +23,11 @@ export default function RootLayout({
   return (
     <html lang="en" className={poppinsFont.className}>
       <body className="container">
-        <Header />
-        <main>{children}</main>
-        <Footer />
+        <CartProvider>
+          <Header />
+          <main>{children}</main>
+          <Footer />
+        </CartProvider>
       </body>
     </html>
   );
