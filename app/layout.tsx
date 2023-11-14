@@ -8,6 +8,8 @@ import Header from "@/components/header/Header";
 import Footer from "@/components/footer/Footer";
 import CartProvider from "@/provider/CartProvider";
 
+import { Toaster } from "react-hot-toast";
+
 const poppinsFont = Poppins({ subsets: ["latin"], weight: "500" });
 
 export const metadata: Metadata = {
@@ -23,6 +25,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={poppinsFont.className}>
       <body className="container">
+        <Toaster position="top-right" reverseOrder={false} />
         <CartProvider>
           <Header />
           <main>{children}</main>

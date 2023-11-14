@@ -13,6 +13,7 @@ const Button: React.FC<ButtonProps> = ({
   return (
     <button
       disabled={disabled}
+      onClick={onClick}
       className={`rounded-lg p-3 ${small ? "w-[250px]" : "w-full"} ${
         outline
           ? "bg-white text-black border border-black"

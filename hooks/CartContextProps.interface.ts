@@ -4,4 +4,5 @@ export interface CartContextProps {
   productCartQty: number;
   productCartContext: ProductCartProps[] | null;
   addToBasket: (product: ProductCartProps) => void;
+  removeFromCart: (product: ProductCartProps) => void;
 }
