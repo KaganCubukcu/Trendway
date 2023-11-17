@@ -14,7 +14,9 @@ const Button: React.FC<ButtonProps> = ({
     <button
       disabled={disabled}
       onClick={onClick}
-      className={`rounded-lg p-3 ${small ? "w-[250px]" : "w-full"} ${
+      className={`flex justify-center items-center gap-2 rounded-lg p-3 ${
+        small ? "w-[250px]" : "w-full"
+      } ${
         outline
           ? "bg-white text-black border border-black"
           : "bg-white text-black"
