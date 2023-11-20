@@ -1,5 +1,9 @@
-Full-stack app with Next.js, TypeScript, Prisma, MongoDB and tailwind CSS
 --- Under Construction ---
+
+Full-stack app with Next.js, TypeScript, Prisma, MongoDB and tailwind CSS
+<hr />
+
+
 <details>
   <summary>v0.1.2</summary>
 
@@ -29,4 +33,11 @@ Full-stack app with Next.js, TypeScript, Prisma, MongoDB and tailwind CSS
   Integrated login processes with Prisma.
 - Added SignUp processes.
 - Added a function to retrieve information about the active user.
+</details>
+
+<details>
+  <summary>v0.1.5</summary>
+
+- Added functionality to the User section in the Header.
+- Created an interface file for the Header.
 </details>
