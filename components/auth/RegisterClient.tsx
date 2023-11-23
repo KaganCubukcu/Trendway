@@ -1,4 +1,5 @@
 "use client";
+import React, { useEffect } from "react";
 import AuthContainer from "@/containers/auth";
 import Heading from "@/components/general/Heading";
 import Input from "@/components/general/Input";
@@ -10,8 +11,9 @@ import axios from "axios";
 import { signIn } from "next-auth/react";
 import toast from "react-hot-toast";
 import { useRouter } from "next/navigation";
+import { UserProps } from "@/components/header/interfaces/UserProps.interface";
 
-const RegisterClient = () => {
+const RegisterClient: React.FC<UserProps> = ({ currentUser }) => {
   const router = useRouter();
   const {
     register,
@@ -38,6 +40,13 @@ const RegisterClient = () => {
       });
     });
   };
+
+  useEffect(() => {
+    if (currentUser) {
+      router.push("/cart");
+      router.refresh();
+    }
+  }, []);
 
   return (
     <AuthContainer>

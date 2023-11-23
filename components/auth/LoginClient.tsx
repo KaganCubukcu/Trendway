@@ -10,8 +10,10 @@ import Link from "next/link";
 import { signIn } from "next-auth/react";
 import toast from "react-hot-toast";
 import { useRouter } from "next/navigation";
+import { UserProps } from "@/components/header/interfaces/UserProps.interface";
+import { useEffect } from "react";
 
-const LoginClient = () => {
+const LoginClient: React.FC<UserProps> = ({ currentUser }) => {
   const router = useRouter();
 
   const {
@@ -35,6 +37,14 @@ const LoginClient = () => {
       }
     });
   };
+
+  useEffect(() => {
+    if (currentUser) {
+      router.push("/cart");
+      router.refresh();
+    }
+  }, []);
+
   return (
     <AuthContainer>
       <div className="w-full md:w-[500px] p-3 shadow-lg rounded-md">

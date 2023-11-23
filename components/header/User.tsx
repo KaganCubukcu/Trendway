@@ -10,8 +10,8 @@ const User: React.FC<UserProps> = ({ currentUser }) => {
   const [openMenu, setOpenMenu] = useState(false);
 
   const menuFunc = (type: any) => {
+    setOpenMenu(false);
     if (type == "logout") {
-      setOpenMenu(false);
       signOut();
       router.push("login");
     } else if (type == "register") {
@@ -35,13 +35,33 @@ const User: React.FC<UserProps> = ({ currentUser }) => {
           <div className="absolute w-[150px] top-10 bg-white text-black shadow-xl right-0 p-2 rounded-md">
             {currentUser ? (
               <div className="space-y-1">
-                <div>Admin</div>
-                <div onClick={() => menuFunc("logout")}>Logout</div>
+                <div
+                  onClick={() => router.push("/admin")}
+                  className="cursor-pointer"
+                >
+                  Admin
+                </div>
+                <div
+                  onClick={() => menuFunc("logout")}
+                  className="cursor-pointer"
+                >
+                  Logout
+                </div>
               </div>
             ) : (
               <div>
-                <div onClick={() => menuFunc("register")}>Register</div>
-                <div onClick={() => menuFunc("login")}>Login</div>
+                <div
+                  onClick={() => menuFunc("register")}
+                  className="cursor-pointer"
+                >
+                  Register
+                </div>
+                <div
+                  onClick={() => menuFunc("login")}
+                  className="cursor-pointer"
+                >
+                  Login
+                </div>
               </div>
             )}
           </div>

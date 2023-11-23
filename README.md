@@ -41,3 +41,11 @@ Full-stack app with Next.js, TypeScript, Prisma, MongoDB and tailwind CSS
 - Added functionality to the User section in the Header.
 - Created an interface file for the Header.
 </details>
+
+<details>
+  <summary>v0.1.6</summary>
+
+- Added functionality to prevent access to the login and register pages when the user is already authenticated
+- Added the overall structure of the admin dashboard and connected the routers.
+- Added a model to Prisma for adding products.
+</details>
