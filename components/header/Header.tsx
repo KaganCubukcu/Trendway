@@ -9,7 +9,7 @@ const Header = async () => {
   const currentUser = await getCurrentUser();
 
   return (
-    <div className="flex items-center justify-between gap-3 md:gap-10 fluid bg-red-400 w-screen px-3 md:px-10">
+    <div className="flex items-center justify-between gap-3 md:gap-10 fluid bg-early-dawn-600 w-screen px-3 md:px-10">
       <Logo />
       <Search />
       <CartCount />

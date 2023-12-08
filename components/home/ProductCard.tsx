@@ -6,7 +6,7 @@ const ProductCard = ({ product }: { product: any }) => {
   return (
     <Link
       href={`product/${product.id}`}
-      className="w-[240px] shadow-lg p-2 rounded-lg cursor-pointer flex flex-col mt-2 border border-1 h-[300px] justify-between"
+      className="w-[240px] shadow-lg p-2 rounded-lg cursor-pointer flex flex-col mt-2 border border-1 border-early-dawn-500 h-[300px] justify-between"
     >
       <div className="relative h-[200px]">
         <Image
