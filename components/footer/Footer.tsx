@@ -1,22 +1,17 @@
-import Image from "next/image";
+import React from "react";
 
-const Footer = () => {
+const Footer: React.FC = () => {
   return (
-    <footer className="bg-early-dawn-600 h-[150px] mt-5 flex justify-center items-center text-early-dawn-50">
-      <div className="text-center flex flex-col justify-center items-center">
+    <footer className="h-[150px] mt-5 flex justify-center items-center text-black">
+      <div className="text-center flex flex-col justify-center items-center space-y-4">
         <div>
           <p className="text-lg font-semibold">TrendWay</p>
-          <p className="text-sm">Your trendy online destination</p>
+          <p className="text-sm">Stay Trendy, Shop Smart</p>
         </div>
         <div>
           <ul className="flex space-x-4">
             <li>
-              <a href="#" className="hover:text-blue-700">
-                Home
-              </a>
-            </li>
-            <li>
-              <a href="#" className="hover:text-blue-700">
+              <a href="/" className="hover:text-blue-700">
                 Products
               </a>
             </li>
@@ -33,7 +28,7 @@ const Footer = () => {
           </ul>
         </div>
         <div>
-          <p className="text-sm">Create by Kağan Çubukçu</p>
+          <p className="text-sm">Created by Kağan Çubukçu</p>
         </div>
       </div>
     </footer>
