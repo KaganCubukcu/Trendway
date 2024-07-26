@@ -1,7 +1,6 @@
 import NextAuth, { AuthOptions } from "next-auth";
 import GoogleProvider from "next-auth/providers/google";
 import { PrismaAdapter } from "@next-auth/prisma-adapter";
-import { PrismaClient } from "@prisma/client";
 import prisma from "@/libs/prismadb";
 import CredentialsProvider from "next-auth/providers/credentials";
 import bcrypt from "bcrypt";
@@ -21,7 +20,7 @@ export const authOptions: AuthOptions = {
       },
       async authorize(credentials, req) {
         if (!credentials?.email || !credentials?.password) {
-          throw new Error("Geçersiz mail veya parola");
+          throw new Error("Invalid email or password");
         }
         const user = await prisma.user.findUnique({
           where: {
@@ -29,14 +28,14 @@ export const authOptions: AuthOptions = {
           },
         });
         if (!user || !user?.hashedPassword) {
-          throw new Error("Kullanıcı bulunamadı");
+          throw new Error("User not found");
         }
         const comparePassword = await bcrypt.compare(
           credentials.password,
           user.hashedPassword,
         );
         if (!comparePassword) {
-          throw new Error("Yanlış Parola Girdiniz");
+          throw new Error("Invalid password");
         }
         return user;
       },
