@@ -3,7 +3,6 @@ import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import "@/styles/reset.css";
 import "@/styles/globals.css";
-
 import Header from "@/components/header/Header";
 import Footer from "@/components/footer/Footer";
 import CartProvider from "@/provider/CartProvider";
