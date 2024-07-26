@@ -1,51 +1,41 @@
 --- Under Construction ---
 
-Full-stack app with Next.js, TypeScript, Prisma, MongoDB and tailwind CSS
+Full-stack application using Next.js, TypeScript, Prisma, MongoDB, and Tailwind CSS
 <hr />
 
+## TODO List
 
-<details>
-  <summary>v0.1.2</summary>
+1. **Setup Project**
+   - Initialize Next.js project // DONE
+   - Configure TypeScript // DONE
+   - Setup Tailwind CSS // DONE
 
-- Avatar, Button, and Counter components were created.
-- Interfaces for these components were defined.
-- A custom hook was created and added to the layout.
-- The DetailClient page was detailed.
-</details>
+2. **Configure Database**
+   - Setup Prisma // DONE
+   - Connect to MongoDB // WAITING
 
-<details>
-  <summary>v0.1.3</summary>
+3. **Create Mock Data**
+   - Add mock data for products in `mocks/mock.json` // DONE
 
-- Cart page was added.
-- The onClick error in Button.tsx was fixed.
-- The react-hot-toast library was added.
-- A feature to display the quantity of products in the cart was added.
-</details>
+4. **Develop Pages**
+   - Create product listing page // DONE
+   - Create product detail page // DONE
 
-<details>
-  <summary>v0.1.4</summary>
+5. **Implement Loading State**
+   - Add loading state component in `app/product/[id]/loading.tsx` // NEED UPDATE OR REDESIGNE
 
-- Added product-specific removal and bulk removal functions to the cart.
-- Added a function to calculate the total cart amount based on the number of added products.
-- Added Login and Register pages.
-  Integrated Prisma and created the schema.
-- Added MongoDB connection to Prisma.
-  Integrated login processes with Prisma.
-- Added SignUp processes.
-- Added a function to retrieve information about the active user.
-</details>
+6. **Configure Next.js**
+   - Update `next.config.js` as needed // DONE
 
-<details>
-  <summary>v0.1.5</summary>
+7. **Testing**
+   - Write unit tests for components // NOT STARTED
+   - Write integration tests for pages // NOT STARTED
 
-- Added functionality to the User section in the Header.
-- Created an interface file for the Header.
-</details>
+8. **Deployment**
+   - Setup deployment pipeline // NOT STARTED
+   - Deploy to Vercel or another hosting provider // NOT STARTED
 
-<details>
-  <summary>v0.1.6</summary>
+9. **Documentation**
+   - Update README with setup and usage instructions // NOT STARTED
+   - Document API endpoints and data models // NOT STARTED
 
-- Added functionality to prevent access to the login and register pages when the user is already authenticated
-- Added the overall structure of the admin dashboard and connected the routers.
-- Added a model to Prisma for adding products.
-</details>
