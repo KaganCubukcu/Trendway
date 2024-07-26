@@ -46,7 +46,7 @@ const RegisterClient: React.FC<UserProps> = ({ currentUser }) => {
       router.push("/cart");
       router.refresh();
     }
-  }, []);
+  }, [currentUser, router]);
 
   return (
     <AuthContainer>
@@ -77,17 +77,17 @@ const RegisterClient: React.FC<UserProps> = ({ currentUser }) => {
           required
         />
 
-        <Button text="Kayıt Ol" onClick={handleSubmit(onSubmit)} />
+        <Button text="Register" onClick={handleSubmit(onSubmit)} />
         <span className="flex justify-center my-2">OR</span>
         <Button
-          text="Google ile Kayıt Ol"
+          text="Register with Google"
           icon={FaGoogle}
           outline
           onClick={() => {}}
         />
         <div>
           <Link href="/login">
-            <span>Giriş Yapmak için buraya tıklayın</span>
+            <span>Login</span>
           </Link>
         </div>
       </div>
